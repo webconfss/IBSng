@@ -1,3 +1,4 @@
+#coding:utf-8
 """ IPy - class and tools for handling of IPv4 and IPv6 Addresses and Networks.
 
 $Id: IPy.py,v 1.1 2004/08/21 16:55:13 farshad_kh Exp $
@@ -743,7 +744,7 @@ class IPint:
      
     def __hash__(self):
         """Called for the key object for dictionary operations, and by
-        the built-in function hash()  Should return a 32-bit integer
+        the built-in function hash()Â  Should return a 32-bit integer
         usable as a hash value for dictionary operations. The only
         required property is that objects which compare equal have the
         same hash value
