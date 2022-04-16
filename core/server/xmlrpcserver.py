@@ -1,3 +1,13 @@
+from xmlrpclib import Marshaller
+from decimal import Decimal
+
+def dump_decimal(self,value, write):
+    write("<value><double>")
+    write(str(value))
+    write("</double></value>\n")
+
+Marshaller.dispatch[Decimal] = dump_decimal
+
 # Changes made to make this work with IBS
 # Written by Brian Quinlan (brian@sweetapp.com).
 # Based on code written by Fredrik Lundh.
