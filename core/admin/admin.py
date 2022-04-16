@@ -137,7 +137,7 @@ class Admin:
         """
         self.deposit_lock.acquire()
         try:
-            self.deposit+=deposit_change
+            self.deposit+=float(deposit_change)
         finally:
             self.deposit_lock.release()
         return self.deposit
