@@ -22,10 +22,12 @@ function toLog($msg)
     {
         $fh=$GLOBALS["log_handler"];
     }
-    $timeArr=localtime(time(),1);
-    $timeStr="{$timeArr["tm_year"]}/{$timeArr["tm_mon"]}/{$timeArr["tm_mday"]} {$timeArr["tm_hour"]}:{$timeArr["tm_min"]}";
+    
+    
+    $timeArr="IRDT/4.0/DST";
+    # $timeStr="{$timeArr["tm_year"]}/{$timeArr["tm_mon"]}/{$timeArr["tm_mday"]} {$timeArr["tm_hour"]}:{$timeArr["tm_min"]}";
     $phperr=isset($php_errormsg)?$php_errormsg:"";
-    fwrite($fh,"{$timeStr} {$msg} {$phperr}\n");
+    # fwrite($fh,"{$timeStr} {$msg} {$phperr}\n");
     return;
 
 }
